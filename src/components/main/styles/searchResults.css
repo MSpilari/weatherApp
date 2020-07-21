@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+body{
+    overflow-y: scroll;
+}
+
+.CityDate{
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Modak';
+    font-size: 1.3em;
+    color: var(--cold-color);
+
+}
+
+.temperatures{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-family: 'Galada';
+    background-color: rgb(218, 218, 218);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+@media(max-width:425px){
+    .MinMax{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.MinMax{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.Day, .Night{
+    text-align: center;
+}
+
+.Min,
+.Max{
+    width: 50%;
+}
+
+.Min h6, .Max h6{
+    font-size: 1.5em;
+    margin: 2px 0;
+}
+
+.Min h6,.Min p, .Night{
+    color: var(--cold-color);
+}
+
+.Max h6, .Max p, .Day{
+    color: var(--hot-color);
+}
+
+.Min p, .Max p{
+    margin: 0;
+    font-size: 3.0em;
+}
+
+.MinMax h1{
+    width: 100%;
+    margin: 2px 0;
+    color: var(--cold-color);
+}

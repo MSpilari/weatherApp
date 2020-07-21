@@ -1,0 +1,31 @@
+.SearchBoxDiv{
+    display: flex;
+    width: 90%;
+    margin: 40px auto;
+    justify-content: center;
+}
+
+.SearchBoxDiv input{
+    width: 50%;
+    margin-right: 5px;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    background-color: rgb(204, 204, 250);
+}
+
+.SearchBoxDiv button{
+    width: 20%;
+    min-width: 73px;
+    font-size: 1.2em;
+    font-family: 'Modak';
+    border: none;
+    background-color: var(--hot-color);
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 10px 8px var(--cold-color);
+}
+
+.SearchBoxDiv button:hover{
+    background-color: orangered;
+}
