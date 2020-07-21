@@ -25,9 +25,9 @@ const SearchBox = () => {
     function UserClickButton(){
         let datas = address.split(',').map(data => data.toLowerCase().trim())
         setAddress(datas)
-        fetch(`https://dataservice.accuweather.com/locations/v1/cities/${datas[2]}/${datas[1]}/search?apikey=${APIKEY}&q=${datas[0]}`, 
+        fetch(`https://cors-anywhere.herokuapp.com/dataservice.accuweather.com/locations/v1/cities/${datas[2]}/${datas[1]}/search?apikey=${APIKEY}&q=${datas[0]}`, 
             {
-                mode:'no-cors', 
+                mode:'cors', 
 
             })
             .then(result => result.json())
@@ -37,7 +37,7 @@ const SearchBox = () => {
 
 
     function CityDetails(key){
-        fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=${APIKEY}`, {mode:'no-cors'})
+        fetch(`https://cors-anywhere.herokuapp.com/dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=${APIKEY}`, {mode:'cors'})
             .then(response => response.json())
             .then(data => setInfo(data.DailyForecasts))
     }
