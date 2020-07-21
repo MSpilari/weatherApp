@@ -1,5 +1,7 @@
 # What's the weather ?
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4f4ac27f-e82f-4c11-a125-23c45a95fded/deploy-status)](https://app.netlify.com/sites/youthful-wiles-67e4e7/deploys)
+
 ## Descrição do projeto
 
 - Uma aplicação feita em [REACTJS](https://pt-br.reactjs.org/) que informa a previsão do tempo.
@@ -15,3 +17,5 @@
 - [API do AccuWeather](https://developer.accuweather.com/)
 
 ## Veja o projeto funcionando no Netlify
+
+- [Whats the Weather](https://youthful-wiles-67e4e7.netlify.app/)
