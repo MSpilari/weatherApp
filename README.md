@@ -18,4 +18,4 @@
 
 ## Veja o projeto funcionando no Netlify
 
-- [Whats the Weather](https://youthful-wiles-67e4e7.netlify.app/)
+- [Whats the Weather](https://whatstheweather.netlify.app/)
