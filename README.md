@@ -1,6 +1,6 @@
 # What's the weather ?
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4f4ac27f-e82f-4c11-a125-23c45a95fded/deploy-status)](https://app.netlify.com/sites/youthful-wiles-67e4e7/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2753207f-b1cb-4e0b-b64e-2006d4a04a2c/deploy-status)](https://app.netlify.com/sites/whatstheweather/deploys)
 
 ## Descrição do projeto
 
