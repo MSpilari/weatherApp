@@ -1,0 +1,122 @@
+.LandingPageWrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LandingPageWrapper main {
+  width: 80%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgTextWrapper {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.titleWrapper {
+  width: 90%;
+  margin: 8px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleWrapper span:nth-child(1) {
+  font: 400 1.2rem Oswald;
+  color: var(--Dark-Purple);
+}
+.titleWrapper span:nth-child(2) {
+  font: 400 1.2rem Rowdies;
+  color: var(--Cerise);
+}
+
+.imgWrapper {
+  width: 90%;
+  margin: 5px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgWrapper img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.fullNameWrapper {
+  width: 90%;
+  margin: 15px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font: 500 1.7rem Rowdies;
+}
+
+.fullNameWrapper span:nth-child(1),
+.fullNameWrapper span:nth-child(3) {
+  color: var(--Dark-Purple);
+}
+
+.fullNameWrapper span:nth-child(2) {
+  color: var(--Cerise);
+}
+
+form {
+  width: 90%;
+  margin: 10px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form label {
+  font: 400 1.4rem Rowdies;
+  color: var(--Dark-Purple);
+}
+
+@media (min-width: 768px) {
+  .imgTextWrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr;
+    column-gap: 5px;
+    grid-template-areas:
+      "titulo imagem"
+      "full imagem"
+      "botao imagem"
+      "select imagem";
+  }
+
+  .titleWrapper {
+    grid-area: titulo;
+  }
+
+  .imgWrapper {
+    grid-area: imagem;
+  }
+
+  .fullNameWrapper {
+    grid-area: full;
+  }
+
+  .buttonWrapper {
+    grid-area: botao;
+  }
+  form {
+    grid-area: select;
+  }
+}

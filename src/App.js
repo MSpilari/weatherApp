@@ -1,15 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
-import Home from './components/home/index'
-import WeatherApp from './components/main/index'
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+
+import LandingPage from "./pages/LandingPage";
+import MainPage from "./pages/MainPage";
+
 function App() {
   return (
-    <div>
-      <Router>
-        <Home />
-        <WeatherApp />
-      </Router>
-    </div>
+    <>
+      <Switch>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/weatherApp" component={MainPage} />
+      </Switch>
+    </>
   );
 }
 

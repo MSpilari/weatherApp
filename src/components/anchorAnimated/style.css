@@ -1,0 +1,56 @@
+.buttonWrapper{
+    width: 90%;
+    height: 60px;
+    margin: 25px auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonWrapper a.button{
+    width: 50%;
+    height: 100%;
+    max-width: 300px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--Byzantium);
+
+    border-radius: 8px;
+    border: 2px solid var(--Cerise);
+
+    font: 700 1.2rem Oswald;
+    position: relative;
+    overflow: hidden;
+    transition: 1s all ease;
+
+    box-shadow: 15px 10px var(--Byzantium);
+}
+
+.buttonWrapper a.button::before{
+    content: '';
+    background-color: var(--Cerise);
+
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+}
+
+.buttonWrapper a.animatedButton::before{
+    width: 0%;
+    height: 100%;
+}
+
+.buttonWrapper a.animatedButton:hover::before{
+    width: 100%;
+}
