@@ -3,11 +3,22 @@ import React from "react";
 import Header from "../../components/header";
 import AnimatedAnchor from "../../components/anchorAnimated";
 
-import LandingImg from "../../assets/landingImg.svg";
+import winterImg from "../../assets/winterImg.svg";
+import springImg from "../../assets/sun.svg";
 
 import "./style.css";
+import { useState } from "react";
 
 const LandingPage = () => {
+  const winter = {img: winterImg, labelSeason: 'Winter'}
+  const spring = {img: springImg, labelSeason: 'Spring'}
+  
+  const [ season, setSeason ] = useState(() => winter)
+
+  const ClickedSelect = (event) => {
+    event.target.value === 'Winter' ? setSeason(winter) : setSeason(spring)
+  }
+  
   return (
     <div className="LandingPageWrapper">
       <Header />
@@ -15,10 +26,10 @@ const LandingPage = () => {
         <div className="imgTextWrapper">
           <div className="titleWrapper">
             <span>Open Season/</span>
-            <span> Winter</span>
+            <span>{season.labelSeason}</span>
           </div>
           <div className="imgWrapper">
-            <img src={LandingImg} alt="LandingImg" />
+            <img src={season.img} alt="LandingImg" />
           </div>
           <div className="fullNameWrapper">
             <span>What's</span>
@@ -27,9 +38,20 @@ const LandingPage = () => {
           </div>
           <AnimatedAnchor path="/weatherapp" label="Discover" />
           <form>
-            <input type="radio" name="weather" value="Winter" />
+            <input 
+            type="radio" 
+            name="weather" 
+            value="Winter" 
+            onClick={(e) => ClickedSelect(e)}
+            />
             <label htmlFor="Winter">Winter</label>
-            <input type="radio" name="weather" value="Spring" />
+
+            <input
+              type="radio"
+              name="weather"
+              value="Spring"
+              onClick={(e) => ClickedSelect(e)}
+            />
             <label htmlFor="Spring">Spring</label>
           </form>
         </div>
