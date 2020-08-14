@@ -26,3 +26,44 @@
 
     font: 400 1.1rem Oswald;
 }
+
+.welcomeWrapper{
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+}
+
+.welcomeWrapper img{
+    width: 100%;
+    max-width: 450px;
+}
+
+.welcomeWrapper h1{
+    font: 700 1.4rem Rowdies;
+    color: var(--Cerise);
+    text-align: center;
+}
+
+@media(min-width:768px){
+    .welcomeWrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 'image text';
+    }
+
+    .welcomeWrapper img {
+        grid-area: image;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcomeWrapper h1 {
+        grid-area: text;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+    }
+}

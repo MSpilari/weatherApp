@@ -1,8 +1,10 @@
 import React from 'react'
 
+import './style.css'
+
 const Information = (props) => {
     
-    const allInfos = props.forecast.map(day => {
+    const allInfos = props.forecast.map((day, index) => {
         let { Minimum, Maximum } = day.Temperature
         let { Day, Night } = day
         let { Date } = day
@@ -10,7 +12,7 @@ const Information = (props) => {
         let finalDate = Date.split('T')
         
         return(
-            <div className='AllInfos'>
+            <div key={index} className='AllInfos'>
                 <div className='CityDate'>
                     <p>Forecast for : {props.city[0]} - {props.city[1].toUpperCase()} - {props.city[2].toUpperCase()}</p>
                     <p>Date: {finalDate[0]}</p>

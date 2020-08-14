@@ -1,0 +1,130 @@
+.AllInfos{
+    width: 90%;
+    margin: 20px auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border: 0.5px solid var(--Cinereous);
+    border-radius: 7px;
+}
+
+.CityDate p:nth-child(1){
+    font: 400 1.3rem Oswald;
+    padding: 0;
+    margin: 0;
+    color: var(--Dark-Purple);
+}
+
+.CityDate p:nth-child(2){
+    font: 400 1.4rem Oswald;
+    padding: 0;
+    margin: 0;
+    color: var(--Byzantium);
+}
+
+.temperatures{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MinMax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.MinMax h1{
+    font: 400 1.4rem Rowdies;
+    margin-top: 20px;
+    color: var(--Dark-Purple);
+}
+
+.Min,
+.Max,
+.Day,
+.Night{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    margin: 10px 0;
+}
+
+.Min h6,
+.Day h1{
+    font: 700 1.6rem Rowdies;
+    margin: 0;
+    color: var(--Cerise);
+}
+
+.Min p{
+    font: 700 1.9rem Rowdies;
+    margin: 0;
+    color: var(--Cerise);
+}
+
+.Max h6,
+.Night h1{
+    font: 700 1.6rem Rowdies;
+    margin: 0;
+    color: var(--Byzantium);
+}
+
+.Max p{
+    font: 700 1.9rem Rowdies;
+    margin: 0;
+    color: var(--Byzantium);
+}
+
+.Day p{
+    font: 700 1.3rem Rowdies;
+    margin: 0;
+    color: var(--Cerise);
+}
+
+.Night p{
+    font: 700 1.3rem Rowdies;
+    margin: 0;
+    color: var(--Byzantium);
+}
+
+@media(min-width:768px){
+    .AllInfos{
+        display: grid;
+        grid-template-rows: 0.5fr 2fr;
+        grid-template-areas: 
+        'dates'
+        'temperatures';
+    }
+    
+    .CityDate{
+        grid-area: dates;
+        margin-left: 20px;
+    }
+
+    .temperatures{
+        grid-area: temperatures;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        'MinMax Day'
+        'MinMax Night';
+    }
+
+    .MinMax{
+        grid-area: MinMax;
+    }
+
+
+    
+}
